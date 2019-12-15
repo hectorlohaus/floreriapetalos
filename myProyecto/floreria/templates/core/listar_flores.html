@@ -1,0 +1,49 @@
+{% extends "core/base.html" %}
+{% block titulo %}
+ <title>Flores Disponibles</title>
+{% endblock titulo %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'core/css/galeria.css' %}" type="text/css">
+{% endblock css %}
+{% block javascript %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="{% static 'core/js/confirmacion.js' %}"></script>
+{% endblock javascript%}
+{% block contenido %}
+
+        
+        <h2 align="center">Flores Disponibles</h2>
+        
+        <table class="table">
+            <tr>
+                <th>Nombre</th>
+                <th>Valor</th>
+                <th>Descripcion</th>
+                <th>Estado</th>
+                <th>Stock</th>
+                <th></th>
+
+            </tr>
+        {% for f in flores %} 
+            <tr>
+                <td>{{ f.nombre }}</td>
+                <td>{{ f.valor }}</td>
+                <td>{{ f.descripcion }}</td>
+                <td>{{ f.estado }}</td>
+                <td>{{ f.stock }}</td>
+                <td> <a href="{% url 'MODIFICARFLOR' f.nombre %}">Modificar</a>
+                <a href="{% url 'ELIMINAR' f.nombre %}" >Eliminar</a>
+                </td>
+            </tr>
+          {% endfor %}
+
+        </table>
+
+{% endblock contenido %}
+
+
+   
+    

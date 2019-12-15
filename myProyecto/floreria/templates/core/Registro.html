@@ -1,0 +1,92 @@
+{% extends "core/base.html" %}
+{% block titulo %}
+	<title>Pétalos</title>
+{% endblock titulo %}
+	
+	{% load static %}
+	{% block css %}
+	<link rel="stylesheet" href="{% static 'core/css/quienes-somos.css' %}">
+	<link rel="stylesheet" href="{% static 'core/css/registro.css' %}">
+	{% endblock css %}
+	
+{% block contenido %}
+</head>
+
+		
+
+		<div class="container">
+
+			<form method="POST">
+
+				<br>
+				<h2 align="center">Registro</h2>
+				<br>
+				<div class="row">
+					<div class="col-25">
+						<label for="txtNombre">Nombre</label>
+					</div>
+					<div class="col-75">
+						<input type="text" name="txtNombre" id="txtNombre" placeholder="Ingrese nombre">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label for="txtApellido">Apellido</label>
+					</div>
+					<div class="col-75">
+						<input type="text" name="txtApellido" id="txtApellido" placeholder="Ingrese apellido paterno">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label for="txtEdad">Correo</label>
+					</div>
+					<div class="col-75">
+						<input type="text" name="txtCorreo" id="txtCorreo" placeholder="a.anonimo@petalos.cl">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label for="txtUsuario">Tipo de usuario</label>
+					</div>
+					<div class="col-75">
+						<input type="text" name="txtUsuario" id="txtUsuario" placeholder="">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label for="txtPass">Contraseña</label>
+					</div>
+				<div class="col-75">
+				<input type="password" name="txtPass" id="txtPass" placeholder="Ingrese contraseña">
+					</div>
+					</div>
+				<div class="row">
+						<div class="col-25">
+							<label for="txtPass1">Confirmar Contraseña</label>
+						</div>
+						<div class="col-75">
+							<input type="password" name="txtPass1" id="txtPass1" placeholder="Confirmar contraseña">
+					</div>
+				</div>
+					
+
+					<div><input type="submit" onclick="grabar()" value="Grabar">
+						<input type="submit" onclick="listar()" value="Listar">
+						<br></div>
+					
+
+					<div><br><br><br>
+							<a href="{% url 'NUEVOPRO' %}"><label>¿Desea ingresar un producto? Pincha Aquí</label></a>
+			
+					</div>
+				</div> 
+		</div>
+		
+
+		</form>
+
+		</div>
+		<div id="respuesta"></div>
+
+{% endblock contenido %}	

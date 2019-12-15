@@ -1,0 +1,72 @@
+    {% extends "core/base.html" %}    
+    
+    {% block titulo %}
+        <title>Contactanos</title>
+    {% endblock titulo %}
+    {% load static %}
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'core/css/contacto.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/quienes-somos.css' %}">
+    {% endblock css %}
+
+    {% block contenido %}
+          <div class="container">
+            <form>
+                <h2 align="center" >Comunicate con nosotros por aquí</h2> <br>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="txtRut">Rut</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="txtRut" name="txtRut" placeholder="Ingrese su RUT">
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="txtNombre">Nombre</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="txtNombre" name="txtNombre" placeholder="Ingrese su Nombre">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="txtApellido">Apellido</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="txtApellido" name="txtApellido" placeholder="Ingrese su Apellido">
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="consulta">Tipo de consulta</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="consulta" name="consulta">
+                                <option value="Seleccione">Seleccione una opción</option>
+                                <option value="felicitaciones">Felicitaciones</option>
+                                <option value="consulta">Consulta</option>
+                                <option value="reclamo">Reclamo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="txtMensaje">Mensaje</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="txtMensaje" name="txtMensaje" placeholder="Redacte su mensaje..."
+                                style="height:200px"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Enviar">
+                    </div>
+            </form>
+        </div>
+
+    {% endblock contenido %}
+      

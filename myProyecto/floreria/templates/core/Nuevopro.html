@@ -1,0 +1,21 @@
+{% extends "core/base.html" %}
+{% block titulo %}
+<title>Pétalos</title>
+{% endblock titulo %}
+{% load static %}
+{% block css %}
+
+{% endblock css %}
+{% block contenido %}
+	<form action="" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<table>
+				{{ form.as_table }}
+		</table>
+		<input type="reset" value="Limpiar">
+		<input type="submit" value="Guardar">
+	</form>
+	{{ mensaje }}
+{% endblock contenido %}
+	
+	

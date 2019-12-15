@@ -1,0 +1,39 @@
+{% extends "core/base.html" %}
+{% block titulo %}
+<title>Quienes somos</title>
+{% endblock titulo %}
+{% load static %}	
+{% block css %}
+<link rel="stylesheet" href="{% static 'core/css/quienes-somos.css' %}">
+{% endblock css %}
+
+{% block contenido %}
+	<article class="content">
+			<header>
+				<h1>Florería Pétalos</h1>
+			</header>
+			<div>
+			<p class="centro"><img class="imagenCentral" src="{% static 'core/img/logo3.png' %}" /></p>
+		    </div>
+			
+			<div>
+				<br>
+			<h4>Nuestro objetivo</h4>
+			<p> Lograr una completa satisfacción y una experiencia única de compra a nuestros clientes. Contamos con un equipo de siete colaboradores, expertas floristas y capacitados despachadores para cumplir con vuestros requerimientos.
+				Somos responsables al momento de brindar un servicio de calidad y oportuno, al mismo tiempo entregamos un producto fresco y duradero.
+				Satisfacción Garantizada. 5 años de experiencia Más de 25.000 entregas.</p>
+				<br>
+				<h4>Misión: </h4>
+				<p>Para nosotros, transmitir lo que sientes con nuestras flores es aquello que guía nuestro trabajo. Y si para ello tenemos que buscar a los mejores floristas, visitar las ferias más importantes del sector, y formarnos continuamente en nuevas tendencias, lo hacemos. Y nos encanta.</p>		
+				<br>
+				<h4>Visión: </h4>
+				<p>Porque queremos ofrecerte los mejores ramos, los más bellos centros, las cestas más originales. Con toda la ilusión, lealtad y honestidad que nos caracteriza. Con todos los ingredientes para que dejes huella en la persona que lo recibe. Con rosas que huelen a rosas, como las de antes. Con flores frescas, que duran días en buen estado. Con pétalos suaves, tersos y delicados.</p>		
+				<br>
+			</div>			
+		</article> 
+{% endblock contenido %}
+    
+	
+
+
+	

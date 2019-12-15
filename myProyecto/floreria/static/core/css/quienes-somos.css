@@ -1,0 +1,128 @@
+.centro{
+    text-align: center;
+}
+.imagenCentral{
+	width: 40%;
+	height: auto;
+}
+.divcentral{
+	width: 80%;
+	height: auto;
+}
+body {
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: rgb(70, 71, 70);
+	background: #f2f2f2; 
+	font-size: 1em;
+	line-height: 1.5em;
+}
+p{
+	margin-left: 10px;
+	margin-right: 10px; 
+	text-align: center;
+}
+h4{
+	text-align: center;
+	font-family: serif;
+}
+
+h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+}
+ 
+
+
+	
+
+
+#main-content {
+	background: white;
+	width: 90%;
+	max-width: 80%;
+	margin: 20px auto;
+	margin-top: 100px ;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+	
+#main-content header,
+#main-content .content {
+	padding: 40px;
+}
+ 
+#logo-header {
+	float: left;
+	padding-top:6px; 
+	padding-left: 10px;
+	text-decoration: none;
+}
+	
+
+	#logo-header .imagen-barra{
+		float: left;
+		height: 70px;
+		width: 70px;
+	}
+	#logo-header .site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+		align-content: center;
+		float: inline;
+	}
+	#logo-header .site-desc {
+		display: block;
+		font-weight: 600;
+		font-size: 0.8em;
+		color: rgb(3, 3, 3);
+	}
+	
+ 
+/*
+ * Navegación
+ */
+
+#main-footer {
+	background: #b3b0b0;
+	color:#f04d71;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+}
+#main-footer p {
+	margin: 0;
+}
+					
+#main-footer a {
+	color: white;
+}
+@media screen and (max-width: 600px) {
+	#main-content {
+		background: white;
+		width: 100%;
+		max-width: 100%;
+		margin: 5px auto;
+		margin-top: 100px ;
+		box-shadow: 0 0 10px rgba(0,0,0,.1);
+	}
+	.imagenCentral{
+		height:auto;
+		width:100%;
+	}
+	.divcentral{
+		width: 100%;
+		height: auto;
+	}
+	h1{
+		font-size: 1.5em;
+		line-height: 1.3em;
+		margin: 15px 0;
+		text-align: center;
+		font-weight: 150;
+	}
+  }
+	

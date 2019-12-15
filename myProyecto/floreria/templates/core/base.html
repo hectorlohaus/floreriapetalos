@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	{% block titulo %}
+	
+	{% endblock titulo %}
+    {% load static %}
+
+	{% block css %}
+	
+	{% endblock css %}
+	{% block javascript %}
+	
+	{% endblock javascript %}
+	<link rel="stylesheet" href="{% static 'core/css/nav.css' %}">
+	
+</head>
+
+<body>
+
+	<nav>
+			
+		<div class="logo">
+				<a href="Inicio.html">
+						<img class="imagen-barra" src="{% static 'core/img/logo3.png' %}"/>
+				</a>
+			<h4>Petalos</h4>
+		</div>
+
+		<ul class="link">
+			<li><a href="{% url 'INDEX' %}">Home</a></li>
+			<li><a href="{% url 'GALERIA' %}">Productos</a></li>
+			
+			<li><a href="{% url 'REGISTRO' %}">Registro</a></li>
+			
+			<li><a href="{% url 'LISTAR' %}">Listar</a></li>
+			<li>
+				<a href="{% url 'CARRITO' %}"> Carrito de Compras</a>
+			</li>
+			{% if user.is_authenticated %}
+			 <li><a href="#">Usuario: {{ user.username }}</a></li>
+			 <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+			{% else %}
+			 <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+			{% endif %}
+
+			
+			
+		</ul>
+
+		<div class="telefono">
+			<div class="linea1"></div>
+			<div class="linea2"></div>
+			<div class="linea3"></div>
+		</div>
+	</nav>
+	<section id="main-content">
+	
+    {% block contenido %}
+    
+	{% endblock contenido %}
+
+</section>
+<footer id="main-footer">
+    <p>Pétalos&copy; 2019</p>
+</footer>
+<script src="{% static 'core/js/nav.js' %}">
+</script>
+</body>
+
+</html>

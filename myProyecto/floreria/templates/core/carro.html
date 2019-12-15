@@ -1,0 +1,46 @@
+{% extends "core/base.html" %}
+
+{% block titulo %}
+    Carrito de Compras - Floreria Pétalos
+{% endblock titulo %}
+
+{% load static %}
+
+{% block contenido %}
+
+<!-- sector del menu -->
+<h2>Carrito de Compras</h2>
+<center>
+<div >
+    <table border="1">
+        <tr>
+            <td>Nombre</td>
+            <td>Precio</td>
+            <td>Cantidad</td>
+            <td>Total</td>
+            <td>Operacion</td>
+        </tr>
+        {% for l in x %}
+        <tr>
+            <td>{{l.nombre}}</td>
+            <td>{{l.precio}}</td>
+            <td>{{l.cantidad}}</td>
+            <td>{{l.total}}</td>
+            <td>
+                <input type="button" value="+" onclick="javascript:location.href='{% url 'CARRO_MAS' l.nombre %}'" >
+                <input type="button" value="-" onclick="javascript:location.href='{% url 'CARRO_MENOS' l.nombre %}'" >
+            </td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="3">Total</td>  
+            <td>{{total}}</td>  
+            <td>
+                <input type="button" value="Grabar Carro" onclick="javascript:location.href='{% url 'GRABAR_CARRO' %}'" >
+            </td>
+        </tr>
+    </table>
+</div>
+{{mensaje}}
+</center>
+{% endblock contenido %}

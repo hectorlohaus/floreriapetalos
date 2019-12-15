@@ -1,0 +1,54 @@
+{% extends "core/base.html" %}
+
+{% block titulo %}
+<title>Petalos</title>
+{% endblock titulo %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'core/css/tabla.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+{% endblock css %}
+	
+{% block contenido %}
+<article class="content">
+			<header>
+				<h1>¡Bienvenidos a Petalos!</h1>
+			</header>
+
+
+			<center>
+				<div id="cf4a">
+					<img class="principal" src="{% static 'core/img/arreglofloral1p.jpg' %}">
+					<img class="principal" src="{% static 'core/img/arreglofloral2p.jpg' %}">
+					<img class="principal" src="{% static 'core/img/arreglofloral4p.jpg' %}">
+					<img class="principal" src="{% static 'core/img/arreglofloral5p.jpg' %}">
+				</div>
+
+
+			</center>
+
+			<br>
+			<br><br><br><br>
+			<div>
+				<table class="product">
+					<tr>
+						<td>
+							<center>
+							<a href="Productos.html"><img src="{% static 'core/img/Lilium.jpg' %}" alt=""></a>
+						</center>
+							<h3>Lilium</h3>
+
+							<p>$1799</p>
+
+						</td>
+
+
+					
+					</tr>
+				</table>
+			</div>
+
+		</article>
+{% endblock contenido %}
+		

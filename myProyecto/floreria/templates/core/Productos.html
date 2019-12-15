@@ -1,0 +1,38 @@
+{% extends "core/base.html" %}
+{% block titulo %}
+ <title>Flores Disponibles</title>
+{% endblock titulo %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'core/css/galeria.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'core/css/tabla.css' %}" type="text/css">
+{% endblock css %}
+{% block contenido %}
+
+        <br>
+        <h2 align="center">Flores Disponibles</h2>
+        <hr>
+        <table class="product">
+        {% for f in flores %} 
+            <tr>
+                <td>
+                    <center>
+                    <img src="{{ f.fotografia.url }}">
+                </center>
+                    <h3>{{ f.nombre }}</h3>
+
+                    <p>${{ f.valor }}</p>
+                    <center>
+                    <button>Agregar al carrito</button>
+                    </center>
+                </td>
+            </tr>
+          {% endfor %}
+
+        </table>
+
+{% endblock contenido %}
+   
+    
+
+   
